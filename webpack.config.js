@@ -22,9 +22,12 @@ module.exports = {
         }
       }
     ]
+  },
+
+
+  // "webpack-dev-server": "^3.1.9" için server ayarları.
+  devServer: {
+    port: 3200,
+    index: "index.html"
   }
-  // devServer: {
-  //   port: 3200,
-  //   index: "index.html"
-  // }
 };

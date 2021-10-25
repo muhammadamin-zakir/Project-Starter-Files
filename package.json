@@ -1,11 +1,25 @@
 {
   "name": "project-starterpack",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Starter Files",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --output-public-path=/bundles/  --mode development --open --hot",
+    "build": "webpack --progress"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "Starter-files"
+  ],
+  "author": "Muhammadamin Zakir",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.22.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
 }
