@@ -1,0 +1,12 @@
+// px to rem converter!
+
+@function rem($pixels, $context:16) {
+    @return ($pixels / $context) * 1rem;
+}
+
+// how to use?
+
+// h1 {
+//     //which means = 30/16 = 1,875rem;
+//     font-size: rem(30);
+// }

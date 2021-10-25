@@ -1,0 +1,54 @@
+@use "../functions/functions" as *;
+
+// 640px, 1024px, 1400px
+$breakpoints-up:(
+    "medium":"40em",
+    "large":"64em",
+    "xlarge":"87.5em",
+);
+
+// 639px, 1023px, 1399px
+$breakpoints-down:(
+    "small":"39.9375em",
+    "medium":"63.9375em",
+    "large":"87.7375em",
+);
+
+@mixin breakpoints-up($size) {
+    @media screen and (min-width:map-get($map: $breakpoints-up, $key: $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoints-down($size) {
+    @media screen and (max-width:map-get($map: $breakpoints-down, $key: $size)) {
+        @content;
+    }
+}
+
+
+// h1{
+//     @include breakpoints-down(small){
+//         text-align: right;
+//     }
+//     text-align: center;
+//     color: abstracts.$color-white;
+// }
+
+// how to use? to remmeber
+
+// h1 {
+//     @include breakpoints-down(large) {
+//         font-size: 3rem;
+//     }
+// }
+
+// //equls to 
+
+// @media screen and (max-width:87.7375em) {
+//     h1 {
+//         font-size {
+//             font-size: 3rem;
+//         }
+//     }
+// }

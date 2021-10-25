@@ -1,0 +1,17 @@
+@use "abstracts/colors";
+@use "abstracts/fonts";
+@use "breakpoints/breakpoints"as bp;
+@use "functions/functions"as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    font-family: fonts.$font-family;
+}
